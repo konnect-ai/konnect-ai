@@ -1,0 +1,10 @@
+
+GUIDE DE DÉPLOIEMENT KONNECT.AI
+
+1. Ouvre le dossier konnectai-site dans VS Code.
+2. Place tous les fichiers à la racine : .html, style.css, .vercel.json, README.md.
+3. Double-clique sur deploy-konnectai.bat pour pousser ton site sur GitHub.
+4. Connecte ton dépôt à Vercel depuis https://vercel.com/new
+5. Vérifie ton site sur : https://konnectai.vercel.app
+
+Bonne chance Alex ✊
