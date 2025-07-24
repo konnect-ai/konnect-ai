@@ -3,29 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KONNECT.AI</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2012_03_57.png') no-repeat center center fixed;
+      background-size: contain;
+      color: #c0faff;
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+  </style>
+  <title>{title}</title>
 </head>
 <body>
+  <header class="hero">
+    <img src="https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2011_58_27.png" alt="Logo KONNECT.AI" style="display:block;margin:0 auto 1rem;width:200px;height:auto;">
+    <h1>KONNECT.AI</h1>
+    <p>Solutions web et IA pour indépendants exigeants</p>
+  </header>
   <nav>
-    <ul>
-      <li><a href="accueil.html">Accueil</a></li>
-      <li><a href="offres.html">Offres</a></li>
-      <li><a href="tarifs.html">Tarifs</a></li>
-      <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="contact.html">Contact</a></li>
+    <ul style="display:flex;justify-content:center;gap:2rem;list-style:none;padding:1rem;background:rgba(0,255,255,0.05);backdrop-filter:blur(10px);">
+      <li><a href="index.html" style="color:#00ffff;text-decoration:none;font-weight:bold;">Accueil</a></li>
+      <li><a href="offres.html" style="color:#00ffff;text-decoration:none;font-weight:bold;">Offres</a></li>
+      <li><a href="tarifs.html" style="color:#00ffff;text-decoration:none;font-weight:bold;">Tarifs</a></li>
+      <li><a href="a-propos.html" style="color:#00ffff;text-decoration:none;font-weight:bold;">À propos</a></li>
+      <li><a href="projets.html" style="color:#00ffff;text-decoration:none;font-weight:bold;">Projets</a></li>
+      <li><a href="contact.html" style="color:#00ffff;text-decoration:none;font-weight:bold;">Contact</a></li>
     </ul>
   </nav>
-  <main>
-<h2>Contact</h2><form action="merci.html" method="POST">
-  <input type="text" placeholder="Nom" required>
-  <input type="email" placeholder="Email" required>
-  <textarea placeholder="Votre message..."></textarea>
-  <button type="submit">Envoyer</button>
-</form>
+  <main style="padding:3rem;max-width:900px;margin:auto;"><section><h2>Me contacter</h2><form action="merci.html" method="POST"><input type="text" placeholder="Nom" required/><input type="email" placeholder="Email" required/><textarea placeholder="Votre message..."></textarea><button type="submit">Envoyer</button></form></section>
   </main>
-  <footer>
+  <footer style="text-align:center;padding:2rem;background:rgba(0,0,0,0.7);color:#fff;">
     <p>&copy; 2025 KONNECT.AI – Créé avec passion par Koko</p>
   </footer>
 </body>
