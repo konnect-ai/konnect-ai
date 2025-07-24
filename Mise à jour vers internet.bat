@@ -1,0 +1,9 @@
+@echo off
+echo 📁 Ajout des fichiers au commit Git...
+git add .
+echo 📝 Création du commit...
+git commit -m "Mise à jour vers internet"
+echo 🚀 Push vers le dépôt distant...
+git push origin master
+echo ✅ Déploiement terminé.
+pause
