@@ -6,47 +6,37 @@
   <title>Contact</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="fade-in">
+<body>
   <header class="hero">
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="offres.html">Offres</a></li>
-        <li><a href="tarifs.html">Tarifs</a></li>
-        <li><a href="a-propos.html">À propos</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <nav><ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="offres.html">Offres</a></li>
+      <li><a href="tarifs.html">Tarifs</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
   </header>
-  <main>
-    <section>
-      <h2>Me contacter</h2><form action='merci.html' method='POST'><input type='text' placeholder='Nom' required/><input type='email' placeholder='Email' required/><textarea placeholder='Votre message...'></textarea><button type='submit'>Envoyer</button></form>
-    </section>
-  </main>
+  <main><section>
+    <h2>Me contacter</h2>
+      <form action="merci.html" method="POST">
+        <input type="text" name="nom" placeholder="Nom" required/>
+        <input type="email" name="email" placeholder="Email" required/>
+        <textarea name="message" placeholder="Votre message..." rows="5"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <div class="social-icons">
+        <div class="social-icon whatsapp"><img src="whatsapp-neon.png" width="100"/><div class="label" data-label="WhatsApp"></div></div>
+        <div class="social-icon instagram"><img src="instagram-neon.png" width="100"/><div class="label" data-label="Instagram"></div></div>
+        <div class="social-icon facebook"><img src="facebook-neon.png" width="80"/><div class="label" data-label="Facebook"></div></div>
+        <div class="social-icon linkedin"><img src="linkedin-neon.png" width="90"/><div class="label" data-label="LinkedIn"></div></div>
+        <div class="social-icon telegram"><img src="telegram-neon.png" width="85"/><div class="label" data-label="Telegram"></div></div>
+      </div>
+  </section></main>
   <footer>
-    <img src="https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2012_03_57.png" class="footer-logo"/>
+    <img src="https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2011_58_27.png" class="footer-logo" alt="Logo"/>
     <p>&copy; 2025 KONNECT.AI – Créé avec passion par Koko</p>
+    <a href="mentions-legales.html" style="color:#888; font-size:0.8rem;">Mentions légales</a>
   </footer>
-  <script>
-    document.querySelectorAll('a[href$=".html"]').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        document.body.classList.remove('fade-in');
-        document.body.classList.add('fade-out');
-        setTimeout(() => window.location = link.href, 400);
-      });
-    });
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-    sections.forEach(sec => observer.observe(sec));
-  </script>
 </body>
 </html>

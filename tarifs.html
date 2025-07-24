@@ -6,47 +6,24 @@
   <title>Tarifs</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body class="fade-in">
+<body>
   <header class="hero">
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="offres.html">Offres</a></li>
-        <li><a href="tarifs.html">Tarifs</a></li>
-        <li><a href="a-propos.html">À propos</a></li>
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <nav><ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="offres.html">Offres</a></li>
+      <li><a href="tarifs.html">Tarifs</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
   </header>
-  <main>
-    <section>
-      <h2>Tarifs</h2><ul><li>Landing page optimisée : à partir de 249€</li><li>Automatisation simple (formulaire → e-mail) : dès 149€</li><li>Pack IA + site : sur devis personnalisé</li></ul>
-    </section>
-  </main>
+  <main><section>
+    <h2>Tarifs</h2><ul><li>Site vitrine : 300€</li><li>Automatisation : 200€</li><li>Pack complet : 900€</li></ul>
+  </section></main>
   <footer>
-    <img src="https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2012_03_57.png" class="footer-logo"/>
+    <img src="https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2011_58_27.png" class="footer-logo" alt="Logo"/>
     <p>&copy; 2025 KONNECT.AI – Créé avec passion par Koko</p>
+    <a href="mentions-legales.html" style="color:#888; font-size:0.8rem;">Mentions légales</a>
   </footer>
-  <script>
-    document.querySelectorAll('a[href$=".html"]').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        document.body.classList.remove('fade-in');
-        document.body.classList.add('fade-out');
-        setTimeout(() => window.location = link.href, 400);
-      });
-    });
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-    sections.forEach(sec => observer.observe(sec));
-  </script>
 </body>
 </html>
