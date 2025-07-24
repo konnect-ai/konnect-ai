@@ -6,34 +6,112 @@
   <title>KONNECT.AI</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Image de fond général (fumée néon) */
-    body { margin:0; padding:0; font-family:'Orbitron',sans-serif; color:#c0faff;
+    /* Fond général fumée néon */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #c0faff;
       background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/neon-smoke.png') no-repeat center center fixed;
-      background-size: cover; overflow-x:hidden; position:relative; }
-    /* Overlay sombre */
-    body::before { content:''; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:0; }
-    /* Header avec image principale */
-    header.hero { position:relative; z-index:2;
-      background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025,%2012_03_57.png') no-repeat center center; background-size: cover;
-      min-height:60vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
-      text-align:center; padding:0 2rem; }
-    header.hero img { width:200px; height:auto; margin-bottom:1rem; }
-    nav { position:relative; z-index:3; background:rgba(0,0,0,0.6); }
-    nav ul { display:flex; justify-content:center; gap:2rem; list-style:none; margin:0; padding:1rem; }
-    nav a { color:#00ffff; text-decoration:none; font-weight:bold; transition:color 0.3s; }
-    nav a:hover { color:#fff; }
-    main { position:relative; z-index:2; padding:3rem; max-width:900px; margin:auto; }
-    section { background:rgba(0,0,0,0.5); border-radius:8px; padding:2rem; margin-bottom:2rem;
-      animation:fadeSlideUp 1s ease-out; }
-    @keyframes fadeSlideUp { from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
-    footer { position:relative; z-index:2; text-align:center; padding:2rem; background:rgba(0,0,0,0.8); color:#fff; }
+      background-size: cover;
+      overflow-x: hidden;
+      position: relative;
+      opacity: 0;
+    }
+    body.fade-in {
+      opacity: 1;
+      transition: opacity 0.4s ease-in;
+    }
+    body.fade-out {
+      opacity: 0;
+      transition: opacity 0.4s ease-out;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+    header.hero {
+      position: relative;
+      z-index: 2;
+      background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2012_03_57.png') no-repeat center top;
+      background-size: contain;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding-bottom: 2rem;
+      text-align: center;
+    }
+    header.hero nav {
+      position: absolute;
+      top: 66%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 4px;
+      z-index: 3;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0.5rem 1rem;
+    }
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    main {
+      position: relative;
+      z-index: 2;
+      padding: 3rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      background: transparent;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 1s ease-out forwards;
+    }
+    @keyframes fadeSlideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+    }
+    .footer-logo {
+      width: 250px;
+      height: auto;
+      margin: 1rem auto;
+      display: block;
+      z-index: 3;
+    }
   </style>
 </head>
-<body>
+<body class="fade-in">
   <header class="hero">
-    <img src="https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025,%2011_58_27.png" alt="Logo KONNECT.AI">
-    <h1>KONNECT.AI</h1>
-    <p>Solutions web & IA pour indépendants exigeants</p>
     <nav>
       <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -47,11 +125,32 @@
   </header>
   <main>
     <section>
-<h2>Projets</h2><ul><li>🔧 KonnectCMS – Système de gestion de contenu statique</li><li>🤖 AutoZap – Automatisation entre formulaires et Google Sheets</li><li>📊 VizAI – Générateur de dashboards IA + web</li></ul>
+      <h2>Projets</h2><ul><li>🔧 KonnectCMS – Système de gestion de contenu statique</li><li>🤖 AutoZap – Automatisation entre formulaires et Google Sheets</li><li>📊 VizAI – Générateur de dashboards IA + web</li></ul>
     </section>
   </main>
   <footer>
+    <img src="https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2011_58_27.png" alt="Logo KONNECT.AI" class="footer-logo">
     <p>&copy; 2025 KONNECT.AI – Créé avec passion par Koko</p>
   </footer>
+  <script>
+    document.querySelectorAll('a[href$=".html"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.remove('fade-in');
+        document.body.classList.add('fade-out');
+        setTimeout(() => window.location = this.href, 400);
+      });
+    });
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
 </body>
 </html>
