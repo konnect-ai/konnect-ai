@@ -1,23 +1,64 @@
-
 body {
-  margin:0; padding:0; font-family:'Orbitron',sans-serif; color:#00ffff;
-  background:#000; overflow-x:hidden; position:relative;
+  margin: 0; padding: 0; font-family: 'Rajdhani', sans-serif; color: #00ffff;
+  background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/neon-smoke.png') center/cover no-repeat fixed;
+  position: relative; overflow-x: hidden;
 }
 body::before {
-  content:''; position:fixed; top:0; left:0; width:100%; height:100%;
-  background:url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2011_58_27.png') center center/cover no-repeat;
-  opacity:0.3; z-index:0;
+  content: ''; position: fixed; top: 0; left: 0; width:100%; height:100%;
+  background: rgba(0,0,0,0.7); z-index: 0;
 }
-header.hero { /* unchanged */ }
-nav ul { /* unchanged */ }
-main { /* unchanged */ }
-section { /* unchanged */ }
+header.hero {
+  position: relative; z-index: 2;
+  background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2011_58_27.png') center top/contain no-repeat;
+  width: 100%; height: 100vh;
+}
+header.hero nav {
+  position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6); border-radius: 4px; padding: 0.5rem 1rem; z-index: 3;
+}
+header.hero nav ul {
+  display: flex; justify-content: center; align-items: center;
+  gap: 2rem; list-style: none; margin: 0; padding: 0; white-space: nowrap;
+}
+header.hero nav a {
+  color: #00ffff; text-decoration: none; font-weight: bold; position: relative;
+}
+header.hero nav a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 2px; background: #00ffff; transition: width 0.3s;
+}
+header.hero nav a:hover::after { width: 100%; }
+
+main {
+  position: relative; z-index: 2; max-width: 900px;
+  margin: -60vh auto 2rem; padding: 1rem;
+}
+section {
+  background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 8px;
+}
+
 footer {
-  position:relative; z-index:2; text-align:center; padding:2rem; background:rgba(0,0,0,0.8);
+  position: relative; z-index: 2; text-align: center;
+  padding: 2rem; background: rgba(0,0,0,0.8);
 }
-.footer-logo { width:300px; margin:1rem auto; display:block; }
 .social-icons {
-  display:flex; justify-content:center; gap:2rem; flex-wrap:nowrap; margin-top:2rem;
+  display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;
 }
-.social-icon { text-align:center; }
-.social-icon img { display:block; margin:0 auto; }
+.social-icons a img {
+  width: 80px; height: auto;
+}
+.footer-logo {
+  width: 200px; margin: 0.5rem auto; display: block;
+}
+.legal-link {
+  color: #888; font-size: 0.8rem; display: block; margin-top: 1rem;
+}
+
+/* Smoke cursor effect */
+.smoke {
+  position: absolute; width: 20px; height: 20px;
+  background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/neon-smoke.png') center/contain no-repeat;
+  opacity: 0.5; pointer-events: none;
+  animation: smokeAnim 1s ease-out forwards; z-index: 9999;
+}
+@keyframes smokeAnim { to { opacity: 0; transform: scale(2); } }
