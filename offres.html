@@ -6,30 +6,32 @@
   <title>KONNECT.AI</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Fond général fumée néon */
+    /* Image de fond général (fumée néon) */
     body { margin:0; padding:0; font-family:'Orbitron',sans-serif; color:#c0faff;
       background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/neon-smoke.png') no-repeat center center fixed;
-      background-size: cover; overflow-x:hidden; position:relative; opacity:0; }
-    body.fade-in { opacity:1; transition:opacity 0.4s ease-in; }
-    body.fade-out { opacity:0; transition:opacity 0.4s ease-out; }
+      background-size: cover; overflow-x:hidden; position:relative; }
+    /* Overlay sombre */
     body::before { content:''; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:0; }
+    /* Header avec image principale */
     header.hero { position:relative; z-index:2;
-      background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2012_03_57.png') no-repeat top center; background-size: contain;
-      min-height:80vh; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; text-align:center; padding-bottom:2rem; }
+      background: url('https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025,%2012_03_57.png') no-repeat center center; background-size: cover;
+      min-height:60vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+      text-align:center; padding:0 2rem; }
     header.hero img { width:200px; height:auto; margin-bottom:1rem; }
-    header.hero nav { position:absolute; top:1rem; left:50%; transform:translateX(-50%); background:rgba(0,0,0,0.6); border-radius:4px; z-index:3; }
-    nav ul { display:flex; justify-content:center; gap:2rem; list-style:none; margin:0; padding:0.5rem 1rem; }
+    nav { position:relative; z-index:3; background:rgba(0,0,0,0.6); }
+    nav ul { display:flex; justify-content:center; gap:2rem; list-style:none; margin:0; padding:1rem; }
     nav a { color:#00ffff; text-decoration:none; font-weight:bold; transition:color 0.3s; }
     nav a:hover { color:#fff; }
     main { position:relative; z-index:2; padding:3rem; max-width:900px; margin:auto; }
-    section { background:rgba(0,0,0,0.5); border-radius:8px; padding:2rem; margin-bottom:2rem; opacity:0; transform:translateY(20px); animation:fadeSlideUp 1s ease-out forwards; }
-    @keyframes fadeSlideUp { to { opacity:1; transform:translateY(0); } }
+    section { background:rgba(0,0,0,0.5); border-radius:8px; padding:2rem; margin-bottom:2rem;
+      animation:fadeSlideUp 1s ease-out; }
+    @keyframes fadeSlideUp { from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
     footer { position:relative; z-index:2; text-align:center; padding:2rem; background:rgba(0,0,0,0.8); color:#fff; }
   </style>
 </head>
-<body class="fade-in">
+<body>
   <header class="hero">
-    <img src="https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025%2C%2011_58_27.png" alt="Logo KONNECT.AI">
+    <img src="https://raw.githubusercontent.com/konnect-ai/konnect-ai/refs/heads/master/ChatGPT%20Image%2023%20juil.%202025,%2011_58_27.png" alt="Logo KONNECT.AI">
     <h1>KONNECT.AI</h1>
     <p>Solutions web & IA pour indépendants exigeants</p>
     <nav>
